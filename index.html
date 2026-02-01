@@ -764,11 +764,19 @@
 
       localStorage.setItem('lang', lang);
       document.documentElement.setAttribute('lang', lang);
+
+      // Let other scripts (chat) react to language switch
+      window.dispatchEvent(new CustomEvent('langchange', { detail: { lang } }));
     }
 
+    // Expose for chat.js and deferred init
+    window.applyLang = applyLang;
+
     const saved = localStorage.getItem('lang');
-    const initial = saved || 'en';
-    applyLang(DICT[initial] ? initial : 'en');
+    const initial = (saved && DICT[saved]) ? saved : 'en';
+
+    // Run AFTER DOM is fully built (chat panel is below this script)
+    window.addEventListener('DOMContentLoaded', () => applyLang(initial));
 
     document.querySelectorAll('.lang-btn').forEach(btn => {
       btn.addEventListener('click', () => applyLang(btn.dataset.lang));

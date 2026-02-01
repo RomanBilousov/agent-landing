@@ -112,6 +112,11 @@
   // Ensure translated placeholder is applied on load
   input.setAttribute('placeholder', t('chat_placeholder'));
 
+  // React to language changes (update placeholder + quick helper copy)
+  window.addEventListener('langchange', () => {
+    input.setAttribute('placeholder', t('chat_placeholder'));
+  });
+
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
     const q = (input.value || '').trim();
