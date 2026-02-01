@@ -473,6 +473,9 @@ h2{margin:0 0 14px; font-size: 26px}
     border-radius: 18px 18px 0 0;
   }
 
+  /* iOS Safari: prevent auto-zoom on input focus */
+  .chat-input{font-size: 16px;}
+
   .chat-head{padding: 12px 14px}
   .chat-close{padding: 8px 12px}
 
