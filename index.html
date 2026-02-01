@@ -23,6 +23,8 @@
         <a href="#how" data-i18n="nav_how">How it works</a>
         <a href="#pricing" data-i18n="nav_pricing">Pricing</a>
         <a href="#questions" data-i18n="nav_questions">Questions</a>
+        <a href="#included" data-i18n="nav_included">Included</a>
+        <a href="#upgrades" data-i18n="nav_upgrades">After MVP</a>
         <a href="#faq" data-i18n="nav_faq">FAQ</a>
       </nav>
 
@@ -142,6 +144,7 @@
         <h2 data-i18n="pricing_h2">Pricing</h2>
         <div class="pricing">
           <div class="price-card">
+            <div class="badge" data-i18n="badge_included">Included</div>
             <div class="price-title" data-i18n="pricing_mvp_title">MVP (fast)</div>
             <div class="price">€2,500</div>
             <div class="muted" data-i18n="pricing_mvp_sub">One-time setup (7–14 days)</div>
@@ -155,6 +158,7 @@
           </div>
 
           <div class="price-card highlight">
+            <div class="badge" data-i18n="badge_optional">Optional</div>
             <div class="price-title" data-i18n="pricing_support_title">Support</div>
             <div class="price">€350/mo</div>
             <div class="muted" data-i18n="pricing_support_sub">Recommended</div>
@@ -166,6 +170,7 @@
           </div>
 
           <div class="price-card">
+            <div class="badge" data-i18n="badge_estimate">Estimate</div>
             <div class="price-title" data-i18n="pricing_rc_title">Running costs</div>
             <div class="price">€100–300/mo</div>
             <div class="muted" data-i18n="pricing_rc_sub">Typical on low volume</div>
@@ -179,21 +184,91 @@
       </div>
     </section>
 
-    <section id="faq" class="section alt">
+    <section id="included" class="section alt">
+      <div class="container reveal">
+        <h2 data-i18n="inc_h2">What’s included in €2,500</h2>
+        <p class="muted" data-i18n="inc_p">MVP is focused on one goal: reply → qualify → save lead → payment link.</p>
+        <div class="grid-3">
+          <div class="feature">
+            <h3 data-i18n="inc_1_h3">WhatsApp replies</h3>
+            <p data-i18n="inc_1_p">One business number. The agent responds 24/7 or within your working hours.</p>
+          </div>
+          <div class="feature">
+            <h3 data-i18n="inc_2_h3">EN + FR</h3>
+            <p data-i18n="inc_2_p">The agent speaks English and French and switches automatically.</p>
+          </div>
+          <div class="feature">
+            <h3 data-i18n="inc_3_h3">Notion lead capture</h3>
+            <p data-i18n="inc_3_p">Every conversation becomes a lead record in Notion with key fields.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="after" class="section">
+      <div class="container reveal">
+        <h2 data-i18n="after_h2">After payment</h2>
+        <div class="grid-3">
+          <div class="feature">
+            <h3 data-i18n="after_1_h3">Confirmation message</h3>
+            <p data-i18n="after_1_p">The agent confirms the payment and explains the next steps.</p>
+          </div>
+          <div class="feature">
+            <h3 data-i18n="after_2_h3">Lead status updated</h3>
+            <p data-i18n="after_2_p">Notion record is updated so your team can see “Paid / Ready”.</p>
+          </div>
+          <div class="feature">
+            <h3 data-i18n="after_3_h3">Handoff (if needed)</h3>
+            <p data-i18n="after_3_p">You can step in to schedule or handle special requests.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="upgrades" class="section alt">
+      <div class="container reveal">
+        <h2 data-i18n="up_h2">Available after MVP</h2>
+        <p class="muted" data-i18n="up_p">These are optional upgrades (separate scope and pricing).</p>
+        <div class="grid-3">
+          <div class="feature">
+            <h3 data-i18n="up_1_h3">Human takeover</h3>
+            <p data-i18n="up_1_p">Rules to transfer the chat to a manager in difficult cases.</p>
+          </div>
+          <div class="feature">
+            <h3 data-i18n="up_2_h3">More channels</h3>
+            <p data-i18n="up_2_p">Instagram DMs, website chat, Telegram, additional WhatsApp numbers.</p>
+          </div>
+          <div class="feature">
+            <h3 data-i18n="up_3_h3">Appointments & calendar</h3>
+            <p data-i18n="up_3_p">Automatic booking, reminders, and calendar integration.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="section">
       <div class="container reveal">
         <h2 data-i18n="faq_h2">FAQ</h2>
         <div class="faq">
           <details open>
-            <summary data-i18n="faq_1_q">Is this compliant for healthcare-related services?</summary>
-            <p data-i18n="faq_1_a">We add guardrails: no medical diagnosis, no promises. The agent collects info and routes to payment/booking.</p>
+            <summary data-i18n="faq_1_q">Is it safe for health-related services?</summary>
+            <p data-i18n="faq_1_a">Yes. We add strict rules: no medical diagnosis, no promises. The agent focuses on qualification and logistics.</p>
           </details>
           <details>
-            <summary data-i18n="faq_2_q">Can a human take over the chat?</summary>
-            <p data-i18n="faq_2_a">Yes. MVP can include handoff rules to a manager when needed (optional upgrade).</p>
+            <summary data-i18n="faq_2_q">Do I need a new WhatsApp number?</summary>
+            <p data-i18n="faq_2_a">Usually no. We connect to your business number.</p>
           </details>
           <details>
-            <summary data-i18n="faq_3_q">Can we add more channels later?</summary>
-            <p data-i18n="faq_3_a">Yes—Instagram, web chat, Telegram, etc. MVP starts with one channel to ship fast.</p>
+            <summary data-i18n="faq_3_q">What exactly is saved in Notion?</summary>
+            <p data-i18n="faq_3_a">Client contact, answers to questions, notes, and status (new/qualified/paid).</p>
+          </details>
+          <details>
+            <summary data-i18n="faq_4_q">Can a human take over the chat?</summary>
+            <p data-i18n="faq_4_a">Yes — as an upgrade. MVP can run fully automated or with simple escalation.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq_5_q">Can you guarantee results?</summary>
+            <p data-i18n="faq_5_a">No guarantees. We optimize the script, but conversions depend on offer, pricing, and demand.</p>
           </details>
         </div>
       </div>
@@ -237,7 +312,39 @@
         nav_how: "How it works",
         nav_pricing: "Pricing",
         nav_questions: "Questions",
+        nav_included: "Included",
+        nav_upgrades: "After MVP",
         nav_faq: "FAQ",
+
+        badge_included: "Included",
+        badge_optional: "Optional",
+        badge_estimate: "Estimate",
+
+        inc_h2: "What’s included in €2,500",
+        inc_p: "MVP is focused on one goal: reply → qualify → save lead → payment link.",
+        inc_1_h3: "WhatsApp replies",
+        inc_1_p: "One business number. The agent responds 24/7 or within your working hours.",
+        inc_2_h3: "EN + FR",
+        inc_2_p: "The agent speaks English and French and switches automatically.",
+        inc_3_h3: "Notion lead capture",
+        inc_3_p: "Every conversation becomes a lead record in Notion with key fields.",
+
+        after_h2: "After payment",
+        after_1_h3: "Confirmation message",
+        after_1_p: "The agent confirms the payment and explains the next steps.",
+        after_2_h3: "Lead status updated",
+        after_2_p: "Notion record is updated so your team can see “Paid / Ready”.",
+        after_3_h3: "Handoff (if needed)",
+        after_3_p: "You can step in to schedule or handle special requests.",
+
+        up_h2: "Available after MVP",
+        up_p: "These are optional upgrades (separate scope and pricing).",
+        up_1_h3: "Human takeover",
+        up_1_p: "Rules to transfer the chat to a manager in difficult cases.",
+        up_2_h3: "More channels",
+        up_2_p: "Instagram DMs, website chat, Telegram, additional WhatsApp numbers.",
+        up_3_h3: "Appointments & calendar",
+        up_3_p: "Automatic booking, reminders, and calendar integration.",
 
         hero_h1: "WhatsApp agent that turns chats into paid bookings",
         hero_sub: "For B2B services (e.g., IV drips): the agent replies in <strong>English + French</strong>, asks the right questions, saves the lead to <strong>Notion</strong>, and sends a <strong>Stripe payment link</strong>.",
@@ -323,7 +430,39 @@
         nav_how: "Fonctionnement",
         nav_pricing: "Tarifs",
         nav_questions: "Questions",
+        nav_included: "Inclus",
+        nav_upgrades: "Après le MVP",
         nav_faq: "FAQ",
+
+        badge_included: "Inclus",
+        badge_optional: "Option",
+        badge_estimate: "Estimation",
+
+        inc_h2: "Ce qui est inclus dans 2 500 €",
+        inc_p: "Le MVP vise un seul objectif : répondre → qualifier → enregistrer le lead → envoyer le lien de paiement.",
+        inc_1_h3: "Réponses WhatsApp",
+        inc_1_p: "Un numéro business. L’agent répond 24/7 ou selon vos horaires.",
+        inc_2_h3: "EN + FR",
+        inc_2_p: "L’agent parle anglais et français et bascule automatiquement.",
+        inc_3_h3: "Leads dans Notion",
+        inc_3_p: "Chaque conversation devient une fiche lead dans Notion.",
+
+        after_h2: "Après le paiement",
+        after_1_h3: "Message de confirmation",
+        after_1_p: "L’agent confirme le paiement et explique la suite.",
+        after_2_h3: "Statut mis à jour",
+        after_2_p: "La fiche Notion est mise à jour (Payé / Prêt).",
+        after_3_h3: "Handoff (si besoin)",
+        after_3_p: "Vous pouvez intervenir pour planifier ou gérer des demandes spéciales.",
+
+        up_h2: "Disponible après le MVP",
+        up_p: "Options (périmètre et prix séparés).",
+        up_1_h3: "Reprise par un humain",
+        up_1_p: "Règles pour transférer le chat à un manager.",
+        up_2_h3: "Plus de canaux",
+        up_2_p: "Instagram DM, chat site, Telegram, numéros WhatsApp supplémentaires.",
+        up_3_h3: "Rendez-vous & calendrier",
+        up_3_p: "Réservation automatique, rappels, intégration calendrier.",
 
         hero_h1: "Un agent WhatsApp qui transforme les chats en paiements",
         hero_sub: "Pour des services B2B (ex. perfusions IV) : l’agent répond en <strong>anglais + français</strong>, qualifie le client, enregistre le lead dans <strong>Notion</strong> et envoie un <strong>lien de paiement Stripe</strong>.",
@@ -409,7 +548,39 @@
         nav_how: "Как работает",
         nav_pricing: "Цена",
         nav_questions: "Вопросы",
+        nav_included: "Входит",
+        nav_upgrades: "После MVP",
         nav_faq: "FAQ",
+
+        badge_included: "Входит",
+        badge_optional: "Опция",
+        badge_estimate: "Оценка",
+
+        inc_h2: "Что входит в €2,500",
+        inc_p: "MVP решает одну задачу: ответить → уточнить → сохранить лид → отправить ссылку на оплату.",
+        inc_1_h3: "Ответы в WhatsApp",
+        inc_1_p: "Один бизнес‑номер. Агент отвечает 24/7 или по вашим часам.",
+        inc_2_h3: "EN + FR",
+        inc_2_p: "Агент говорит на английском и французском и переключается автоматически.",
+        inc_3_h3: "Лиды в Notion",
+        inc_3_p: "Каждая переписка превращается в карточку лида в Notion.",
+
+        after_h2: "После оплаты",
+        after_1_h3: "Подтверждение",
+        after_1_p: "Агент подтверждает оплату и объясняет следующие шаги.",
+        after_2_h3: "Обновление статуса",
+        after_2_p: "Карточка лида в Notion обновляется (Paid / Ready).",
+        after_3_h3: "Передача человеку",
+        after_3_p: "Вы можете подключиться для записи или нестандартных запросов.",
+
+        up_h2: "Доступно после MVP",
+        up_p: "Опции (отдельный объём работ и цена).",
+        up_1_h3: "Перехват чата человеком",
+        up_1_p: "Правила передачи на менеджера в сложных случаях.",
+        up_2_h3: "Больше каналов",
+        up_2_p: "Instagram DM, чат на сайте, Telegram, доп. номера WhatsApp.",
+        up_3_h3: "Запись и календарь",
+        up_3_p: "Автобронирование, напоминания, интеграция с календарём.",
 
         hero_h1: "WhatsApp‑агент, который превращает переписку в оплату",
         hero_sub: "Для B2B‑сервисов (например, капельницы): агент отвечает на <strong>английском + французском</strong>, квалифицирует клиента, сохраняет лид в <strong>Notion</strong> и отправляет <strong>ссылку на оплату Stripe</strong>.",
@@ -510,7 +681,7 @@
     }
 
     const saved = localStorage.getItem('lang');
-    const initial = saved || (navigator.language || 'en').slice(0,2);
+    const initial = saved || 'en';
     applyLang(DICT[initial] ? initial : 'en');
 
     document.querySelectorAll('.lang-btn').forEach(btn => {
