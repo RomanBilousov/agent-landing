@@ -90,6 +90,28 @@
     return (dict && dict[key]) || (window.DICT && window.DICT.en && window.DICT.en[key]) || key;
   }
 
+  const visitorIdKey = 'agentLandingVisitorId';
+  function getVisitorId(){
+    let id = localStorage.getItem(visitorIdKey);
+    if (!id) {
+      id = 'v_' + Math.random().toString(36).slice(2) + '_' + Date.now().toString(36);
+      localStorage.setItem(visitorIdKey, id);
+    }
+    return id;
+  }
+
+  async function sendToCRM(payload){
+    // best-effort; ignore failures
+    try {
+      const url = 'https://crm.reelixy.com/api/public/agent-landing/message';
+      await fetch(url, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+    } catch (_) {}
+  }
+
   function addMsg(role, text){
     const wrap = document.createElement('div');
     wrap.className = `chat-msg ${role}`;
@@ -131,10 +153,25 @@
     e.preventDefault();
     const q = (input.value || '').trim();
     if (!q) return;
+
     addMsg('user', q);
     input.value = '';
+
     // simulate small thinking delay
-    setTimeout(() => addMsg('bot', answer(q)), 180);
+    setTimeout(() => {
+      const a = answer(q);
+      addMsg('bot', a);
+
+      // Send visitor question + helper answer to CRM (source=agent-landing)
+      sendToCRM({
+        visitorId: getVisitorId(),
+        userMessage: q,
+        botMessage: a,
+        language: getLang(),
+        pageUrl: window.location.href,
+        source: 'agent-landing'
+      });
+    }, 180);
   });
 
   sendToIg.addEventListener('click', () => {
