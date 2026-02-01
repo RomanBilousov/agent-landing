@@ -36,7 +36,7 @@
   <main>
     <section class="hero">
       <div class="container hero-grid">
-        <div>
+        <div class="reveal">
           <h1 data-i18n="hero_h1">WhatsApp agent that converts chats into paid orders</h1>
           <p class="sub" data-i18n-html="hero_sub">
             For B2B services (e.g., IV drips): the agent replies in <strong>English + French</strong>, qualifies the client,
@@ -58,7 +58,7 @@
           <p class="note" data-i18n-html="hero_note">MVP delivery: <strong>7–14 days</strong>. Transparent monthly running costs.</p>
         </div>
 
-        <div class="card">
+        <div class="card reveal">
           <div class="card-title" data-i18n="what_title">What you get</div>
           <ul class="list">
             <li data-i18n="what_1">Auto-replies in WhatsApp (EN/FR)</li>
@@ -72,7 +72,7 @@
     </section>
 
     <section id="solution" class="section">
-      <div class="container">
+      <div class="container reveal">
         <h2 data-i18n="solution_h2">Solution</h2>
         <div class="grid-3">
           <div class="feature">
@@ -92,7 +92,7 @@
     </section>
 
     <section id="how" class="section alt">
-      <div class="container">
+      <div class="container reveal">
         <h2 data-i18n="how_h2">How it works</h2>
         <ol class="steps">
           <li>
@@ -116,7 +116,7 @@
     </section>
 
     <section id="pricing" class="section">
-      <div class="container">
+      <div class="container reveal">
         <h2 data-i18n="pricing_h2">Pricing</h2>
         <div class="pricing">
           <div class="price-card">
@@ -158,7 +158,7 @@
     </section>
 
     <section id="faq" class="section alt">
-      <div class="container">
+      <div class="container reveal">
         <h2 data-i18n="faq_h2">FAQ</h2>
         <div class="faq">
           <details open>
@@ -178,7 +178,7 @@
     </section>
 
     <section id="contact" class="section">
-      <div class="container">
+      <div class="container reveal">
         <h2 data-i18n="contact_h2">Contact</h2>
         <p class="muted" data-i18n="contact_p">Reply in Telegram to confirm: company name, WhatsApp number, and Stripe account type.</p>
         <div class="contact-box">
@@ -449,6 +449,8 @@
       btn.addEventListener('click', () => applyLang(btn.dataset.lang));
     });
   </script>
+
+  <script src="animate.js"></script>
 </body>
 </html>
 <!-- deployed 2026-02-01T19:36:47+02:00 -->
