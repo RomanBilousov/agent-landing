@@ -352,6 +352,10 @@ h2{margin:0 0 14px; font-size: 26px}
   opacity: 0;
   pointer-events: none;
   transition: opacity .18s ease, transform .18s ease;
+
+  /* layout */
+  display: flex;
+  flex-direction: column;
 }
 .chat-panel.open{opacity:1; transform: translateY(0); pointer-events:auto}
 
@@ -375,8 +379,10 @@ h2{margin:0 0 14px; font-size: 26px}
 
 .chat-log{
   padding: 12px;
-  height: 330px;
+  flex: 1;
+  min-height: 220px;
   overflow: auto;
+  -webkit-overflow-scrolling: touch;
 }
 .chat-msg{display:flex; margin: 8px 0}
 .chat-msg.user{justify-content:flex-end}
@@ -454,4 +460,33 @@ h2{margin:0 0 14px; font-size: 26px}
   .pricing{grid-template-columns: 1fr}
   .nav{display:none}
   .lang{margin-left:0}
+}
+
+/* Mobile chat: make it a bottom sheet (usable with keyboard) */
+@media (max-width: 600px){
+  .chat-panel{
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    max-height: 100dvh;
+    border-radius: 18px 18px 0 0;
+  }
+
+  .chat-head{padding: 12px 14px}
+  .chat-close{padding: 8px 12px}
+
+  .chat-log{
+    min-height: 160px;
+    padding: 12px 14px;
+  }
+
+  .chat-foot{
+    padding: 10px 14px calc(10px + env(safe-area-inset-bottom));
+  }
+
+  .chat-fab{
+    right: 14px;
+    bottom: calc(14px + env(safe-area-inset-bottom));
+  }
 }

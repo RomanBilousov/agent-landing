@@ -93,7 +93,8 @@
   function open(){
     panel.classList.add('open');
     btn.classList.add('open');
-    input.focus();
+    // iOS: focusing immediately can fail; defer to next frame.
+    setTimeout(() => input.focus(), 50);
   }
   function close(){
     panel.classList.remove('open');
