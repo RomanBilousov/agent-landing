@@ -287,6 +287,120 @@ h2{margin:0 0 14px; font-size: 26px}
 .footer{padding: 26px 0; color: var(--muted)}
 .muted{color: var(--muted)}
 
+/* Floating helper (popup) */
+.chat-fab{
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 50;
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,.18);
+  background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(17,24,39,.22));
+  backdrop-filter: var(--blur);
+  -webkit-backdrop-filter: var(--blur);
+  box-shadow: 0 18px 60px rgba(0,0,0,.45);
+  color: var(--text);
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: transform .18s ease;
+}
+.chat-fab:hover{transform: translateY(-2px)}
+.chat-fab .dot{width:8px;height:8px;border-radius:50%;background:rgba(34,197,94,.95); box-shadow: 0 0 0 6px rgba(34,197,94,.15)}
+
+.chat-panel{
+  position: fixed;
+  right: 16px;
+  bottom: 78px;
+  width: min(360px, calc(100vw - 32px));
+  max-height: 540px;
+  z-index: 50;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,.16);
+  background: linear-gradient(180deg, rgba(255,255,255,.07), rgba(17,24,39,.22));
+  backdrop-filter: var(--blur);
+  -webkit-backdrop-filter: var(--blur);
+  box-shadow: 0 26px 90px rgba(0,0,0,.55);
+  overflow: hidden;
+  transform: translateY(8px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .18s ease, transform .18s ease;
+}
+.chat-panel.open{opacity:1; transform: translateY(0); pointer-events:auto}
+
+.chat-head{
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  padding: 12px 12px;
+  border-bottom: 1px solid rgba(255,255,255,.10);
+}
+.chat-title{font-weight: 800; font-size: 13px}
+.chat-sub{font-size: 12px; color: var(--muted)}
+.chat-close{
+  border: 1px solid rgba(255,255,255,.14);
+  background: rgba(17,24,39,.22);
+  color: var(--text);
+  border-radius: 12px;
+  padding: 6px 10px;
+  cursor:pointer;
+}
+
+.chat-log{
+  padding: 12px;
+  height: 330px;
+  overflow: auto;
+}
+.chat-msg{display:flex; margin: 8px 0}
+.chat-msg.user{justify-content:flex-end}
+.chat-bubble{
+  max-width: 78%;
+  border: 1px solid rgba(255,255,255,.14);
+  background: rgba(17,24,39,.28);
+  border-radius: 14px;
+  padding: 10px 12px;
+  font-size: 13px;
+  color: var(--text);
+  line-height: 1.35;
+}
+.chat-msg.user .chat-bubble{
+  background: linear-gradient(135deg, rgba(96,165,250,.22), rgba(34,197,94,.18));
+  border-color: rgba(96,165,250,.20);
+}
+
+.chat-foot{border-top: 1px solid rgba(255,255,255,.10); padding: 10px}
+.chat-form{display:flex; gap:8px}
+.chat-input{
+  flex:1;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,.14);
+  background: rgba(17,24,39,.20);
+  color: var(--text);
+  padding: 10px 10px;
+  outline: none;
+}
+.chat-send{
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,.14);
+  background: rgba(17,24,39,.24);
+  color: var(--text);
+  padding: 10px 12px;
+  cursor:pointer;
+}
+.chat-actions{display:flex; gap:8px; margin-top: 8px; justify-content: space-between}
+.chat-ig{
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,.14);
+  background: rgba(17,24,39,.18);
+  color: var(--text);
+  padding: 10px 12px;
+  cursor:pointer;
+}
+
 /* reveal animation
    Important: avoid blank content if JS/observer fails.
    We only hide elements when JS is enabled.
