@@ -14,16 +14,22 @@
         <div class="logo">R</div>
         <div class="brand-text">
           <div class="brand-name">Reelixy</div>
-          <div class="brand-tag">AI automation for sales & ops</div>
+          <div class="brand-tag" data-i18n="brand_tag">AI automation for sales & ops</div>
         </div>
       </div>
 
       <nav class="nav">
-        <a href="#solution">Solution</a>
-        <a href="#how">How it works</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#faq">FAQ</a>
+        <a href="#solution" data-i18n="nav_solution">Solution</a>
+        <a href="#how" data-i18n="nav_how">How it works</a>
+        <a href="#pricing" data-i18n="nav_pricing">Pricing</a>
+        <a href="#faq" data-i18n="nav_faq">FAQ</a>
       </nav>
+
+      <div class="lang">
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="fr">FR</button>
+        <button class="lang-btn" data-lang="ru">RU</button>
+      </div>
     </div>
   </header>
 
@@ -31,8 +37,8 @@
     <section class="hero">
       <div class="container hero-grid">
         <div>
-          <h1>WhatsApp agent that converts chats into paid orders</h1>
-          <p class="sub">
+          <h1 data-i18n="hero_h1">WhatsApp agent that converts chats into paid orders</h1>
+          <p class="sub" data-i18n-html="hero_sub">
             For B2B services (e.g., IV drips): the agent replies in <strong>English + French</strong>, qualifies the client,
             saves the lead to <strong>Notion</strong>, and sends a <strong>Stripe payment link</strong>.
           </p>
@@ -45,21 +51,21 @@
           </div>
 
           <div class="cta-row">
-            <a class="btn primary" href="#contact">Get a quote</a>
-            <a class="btn" href="#pricing">See pricing</a>
+            <a class="btn primary" href="#contact" data-i18n="cta_quote">Get a quote</a>
+            <a class="btn" href="#pricing" data-i18n="cta_pricing">See pricing</a>
           </div>
 
-          <p class="note">MVP delivery: <strong>7–14 days</strong>. Transparent monthly running costs.</p>
+          <p class="note" data-i18n-html="hero_note">MVP delivery: <strong>7–14 days</strong>. Transparent monthly running costs.</p>
         </div>
 
         <div class="card">
-          <div class="card-title">What you get</div>
+          <div class="card-title" data-i18n="what_title">What you get</div>
           <ul class="list">
-            <li>Auto-replies in WhatsApp (EN/FR)</li>
-            <li>Lead qualification form (chat flow)</li>
-            <li>Lead saved to Notion (database + fields)</li>
-            <li>Stripe Payment Link / Checkout handoff</li>
-            <li>Conversation logs + basic analytics</li>
+            <li data-i18n="what_1">Auto-replies in WhatsApp (EN/FR)</li>
+            <li data-i18n="what_2">Lead qualification form (chat flow)</li>
+            <li data-i18n="what_3">Lead saved to Notion (database + fields)</li>
+            <li data-i18n="what_4">Stripe Payment Link / Checkout handoff</li>
+            <li data-i18n="what_5">Conversation logs + basic analytics</li>
           </ul>
         </div>
       </div>
@@ -67,19 +73,19 @@
 
     <section id="solution" class="section">
       <div class="container">
-        <h2>Solution</h2>
+        <h2 data-i18n="solution_h2">Solution</h2>
         <div class="grid-3">
           <div class="feature">
-            <h3>Qualify automatically</h3>
-            <p>City/country, age, language preference, needs, package choice, timing.</p>
+            <h3 data-i18n="solution_1_h3">Qualify automatically</h3>
+            <p data-i18n="solution_1_p">City/country, age, language preference, needs, package choice, timing.</p>
           </div>
           <div class="feature">
-            <h3>Keep leads structured</h3>
-            <p>All key info goes into Notion so your team can follow up and report.</p>
+            <h3 data-i18n="solution_2_h3">Keep leads structured</h3>
+            <p data-i18n="solution_2_p">All key info goes into Notion so your team can follow up and report.</p>
           </div>
           <div class="feature">
-            <h3>Get paid faster</h3>
-            <p>Stripe payment link/checkout sent at the right moment to close the deal.</p>
+            <h3 data-i18n="solution_3_h3">Get paid faster</h3>
+            <p data-i18n="solution_3_p">Stripe payment link/checkout sent at the right moment to close the deal.</p>
           </div>
         </div>
       </div>
@@ -87,23 +93,23 @@
 
     <section id="how" class="section alt">
       <div class="container">
-        <h2>How it works</h2>
+        <h2 data-i18n="how_h2">How it works</h2>
         <ol class="steps">
           <li>
-            <strong>Client messages WhatsApp</strong>
-            <div class="muted">Inbound chat to your business number.</div>
+            <strong data-i18n="how_1_str">Client messages WhatsApp</strong>
+            <div class="muted" data-i18n="how_1_p">Inbound chat to your business number.</div>
           </li>
           <li>
-            <strong>Agent qualifies</strong>
-            <div class="muted">Asks the right questions, handles common objections.</div>
+            <strong data-i18n="how_2_str">Agent qualifies</strong>
+            <div class="muted" data-i18n="how_2_p">Asks the right questions, handles common objections.</div>
           </li>
           <li>
-            <strong>Lead saved to Notion</strong>
-            <div class="muted">Name, contact, context, answers, status, notes.</div>
+            <strong data-i18n="how_3_str">Lead saved to Notion</strong>
+            <div class="muted" data-i18n="how_3_p">Name, contact, context, answers, status, notes.</div>
           </li>
           <li>
-            <strong>Stripe link sent</strong>
-            <div class="muted">Payment Link/Checkout for selected package.</div>
+            <strong data-i18n="how_4_str">Stripe link sent</strong>
+            <div class="muted" data-i18n="how_4_p">Payment Link/Checkout for selected package.</div>
           </li>
         </ol>
       </div>
@@ -111,40 +117,40 @@
 
     <section id="pricing" class="section">
       <div class="container">
-        <h2>Pricing</h2>
+        <h2 data-i18n="pricing_h2">Pricing</h2>
         <div class="pricing">
           <div class="price-card">
-            <div class="price-title">MVP (fast)</div>
+            <div class="price-title" data-i18n="pricing_mvp_title">MVP (fast)</div>
             <div class="price">€2,500</div>
-            <div class="muted">One-time setup (7–14 days)</div>
+            <div class="muted" data-i18n="pricing_mvp_sub">One-time setup (7–14 days)</div>
             <ul class="list">
-              <li>WhatsApp (1 number)</li>
-              <li>EN + FR</li>
-              <li>Notion lead database</li>
-              <li>Stripe payment link/checkout</li>
-              <li>Basic logs</li>
+              <li data-i18n="pricing_mvp_1">WhatsApp (1 number)</li>
+              <li data-i18n="pricing_mvp_2">EN + FR</li>
+              <li data-i18n="pricing_mvp_3">Notion lead database</li>
+              <li data-i18n="pricing_mvp_4">Stripe payment link/checkout</li>
+              <li data-i18n="pricing_mvp_5">Basic logs</li>
             </ul>
           </div>
 
           <div class="price-card highlight">
-            <div class="price-title">Support</div>
+            <div class="price-title" data-i18n="pricing_support_title">Support</div>
             <div class="price">€350/mo</div>
-            <div class="muted">Recommended</div>
+            <div class="muted" data-i18n="pricing_support_sub">Recommended</div>
             <ul class="list">
-              <li>Script updates & tuning</li>
-              <li>Quality control</li>
-              <li>Small improvements</li>
+              <li data-i18n="pricing_support_1">Script updates & tuning</li>
+              <li data-i18n="pricing_support_2">Quality control</li>
+              <li data-i18n="pricing_support_3">Small improvements</li>
             </ul>
           </div>
 
           <div class="price-card">
-            <div class="price-title">Running costs</div>
+            <div class="price-title" data-i18n="pricing_rc_title">Running costs</div>
             <div class="price">€100–300/mo</div>
-            <div class="muted">Typical on low volume</div>
+            <div class="muted" data-i18n="pricing_rc_sub">Typical on low volume</div>
             <ul class="list">
-              <li>WhatsApp Business API provider</li>
-              <li>LLM usage (by traffic)</li>
-              <li>Stripe fees (per payment)</li>
+              <li data-i18n="pricing_rc_1">WhatsApp Business API provider</li>
+              <li data-i18n="pricing_rc_2">LLM usage (by traffic)</li>
+              <li data-i18n="pricing_rc_3">Stripe fees (per payment)</li>
             </ul>
           </div>
         </div>
@@ -153,19 +159,19 @@
 
     <section id="faq" class="section alt">
       <div class="container">
-        <h2>FAQ</h2>
+        <h2 data-i18n="faq_h2">FAQ</h2>
         <div class="faq">
           <details open>
-            <summary>Is this compliant for healthcare-related services?</summary>
-            <p>We add guardrails: no medical diagnosis, no promises. The agent collects info and routes to payment/booking.</p>
+            <summary data-i18n="faq_1_q">Is this compliant for healthcare-related services?</summary>
+            <p data-i18n="faq_1_a">We add guardrails: no medical diagnosis, no promises. The agent collects info and routes to payment/booking.</p>
           </details>
           <details>
-            <summary>Can a human take over the chat?</summary>
-            <p>Yes. MVP can include handoff rules to a manager when needed (optional upgrade).</p>
+            <summary data-i18n="faq_2_q">Can a human take over the chat?</summary>
+            <p data-i18n="faq_2_a">Yes. MVP can include handoff rules to a manager when needed (optional upgrade).</p>
           </details>
           <details>
-            <summary>Can we add more channels later?</summary>
-            <p>Yes—Instagram, web chat, Telegram, etc. MVP starts with one channel to ship fast.</p>
+            <summary data-i18n="faq_3_q">Can we add more channels later?</summary>
+            <p data-i18n="faq_3_a">Yes—Instagram, web chat, Telegram, etc. MVP starts with one channel to ship fast.</p>
           </details>
         </div>
       </div>
@@ -173,11 +179,11 @@
 
     <section id="contact" class="section">
       <div class="container">
-        <h2>Contact</h2>
-        <p class="muted">Reply in Telegram to confirm: company name, WhatsApp number, and Stripe account type.</p>
+        <h2 data-i18n="contact_h2">Contact</h2>
+        <p class="muted" data-i18n="contact_p">Reply in Telegram to confirm: company name, WhatsApp number, and Stripe account type.</p>
         <div class="contact-box">
           <div><strong>Reelixy</strong></div>
-          <div class="muted">AI automation & integrations</div>
+          <div class="muted" data-i18n="contact_tag">AI automation & integrations</div>
         </div>
       </div>
     </section>
@@ -185,12 +191,263 @@
 
   <footer class="footer">
     <div class="container">
-      <div class="muted">© <span id="year"></span> Reelixy. All rights reserved.</div>
+      <div class="muted" data-i18n-html="footer">© <span id="year"></span> Reelixy. All rights reserved.</div>
     </div>
   </footer>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    const DICT = {
+      en: {
+        brand_tag: "AI automation for sales & ops",
+        nav_solution: "Solution",
+        nav_how: "How it works",
+        nav_pricing: "Pricing",
+        nav_faq: "FAQ",
+
+        hero_h1: "WhatsApp agent that converts chats into paid orders",
+        hero_sub: "For B2B services (e.g., IV drips): the agent replies in <strong>English + French</strong>, qualifies the client, saves the lead to <strong>Notion</strong>, and sends a <strong>Stripe payment link</strong>.",
+        cta_quote: "Get a quote",
+        cta_pricing: "See pricing",
+        hero_note: "MVP delivery: <strong>7–14 days</strong>. Transparent monthly running costs.",
+
+        what_title: "What you get",
+        what_1: "Auto-replies in WhatsApp (EN/FR)",
+        what_2: "Lead qualification form (chat flow)",
+        what_3: "Lead saved to Notion (database + fields)",
+        what_4: "Stripe Payment Link / Checkout handoff",
+        what_5: "Conversation logs + basic analytics",
+
+        solution_h2: "Solution",
+        solution_1_h3: "Qualify automatically",
+        solution_1_p: "City/country, age, language preference, needs, package choice, timing.",
+        solution_2_h3: "Keep leads structured",
+        solution_2_p: "All key info goes into Notion so your team can follow up and report.",
+        solution_3_h3: "Get paid faster",
+        solution_3_p: "Stripe payment link/checkout sent at the right moment to close the deal.",
+
+        how_h2: "How it works",
+        how_1_str: "Client messages WhatsApp",
+        how_1_p: "Inbound chat to your business number.",
+        how_2_str: "Agent qualifies",
+        how_2_p: "Asks the right questions, handles common objections.",
+        how_3_str: "Lead saved to Notion",
+        how_3_p: "Name, contact, context, answers, status, notes.",
+        how_4_str: "Stripe link sent",
+        how_4_p: "Payment Link/Checkout for selected package.",
+
+        pricing_h2: "Pricing",
+        pricing_mvp_title: "MVP (fast)",
+        pricing_mvp_sub: "One-time setup (7–14 days)",
+        pricing_mvp_1: "WhatsApp (1 number)",
+        pricing_mvp_2: "EN + FR",
+        pricing_mvp_3: "Notion lead database",
+        pricing_mvp_4: "Stripe payment link/checkout",
+        pricing_mvp_5: "Basic logs",
+
+        pricing_support_title: "Support",
+        pricing_support_sub: "Recommended",
+        pricing_support_1: "Script updates & tuning",
+        pricing_support_2: "Quality control",
+        pricing_support_3: "Small improvements",
+
+        pricing_rc_title: "Running costs",
+        pricing_rc_sub: "Typical on low volume",
+        pricing_rc_1: "WhatsApp Business API provider",
+        pricing_rc_2: "LLM usage (by traffic)",
+        pricing_rc_3: "Stripe fees (per payment)",
+
+        faq_h2: "FAQ",
+        faq_1_q: "Is this compliant for healthcare-related services?",
+        faq_1_a: "We add guardrails: no medical diagnosis, no promises. The agent collects info and routes to payment/booking.",
+        faq_2_q: "Can a human take over the chat?",
+        faq_2_a: "Yes. MVP can include handoff rules to a manager when needed (optional upgrade).",
+        faq_3_q: "Can we add more channels later?",
+        faq_3_a: "Yes—Instagram, web chat, Telegram, etc. MVP starts with one channel to ship fast.",
+
+        contact_h2: "Contact",
+        contact_p: "Reply in Telegram to confirm: company name, WhatsApp number, and Stripe account type.",
+        contact_tag: "AI automation & integrations",
+
+        footer: "© <span id=\"year\"></span> Reelixy. All rights reserved."
+      },
+
+      fr: {
+        brand_tag: "Automatisation IA pour ventes & ops",
+        nav_solution: "Solution",
+        nav_how: "Fonctionnement",
+        nav_pricing: "Tarifs",
+        nav_faq: "FAQ",
+
+        hero_h1: "Un agent WhatsApp qui transforme les chats en paiements",
+        hero_sub: "Pour des services B2B (ex. perfusions IV) : l’agent répond en <strong>anglais + français</strong>, qualifie le client, enregistre le lead dans <strong>Notion</strong> et envoie un <strong>lien de paiement Stripe</strong>.",
+        cta_quote: "Demander un devis",
+        cta_pricing: "Voir les tarifs",
+        hero_note: "Livraison MVP : <strong>7–14 jours</strong>. Coûts mensuels transparents.",
+
+        what_title: "Ce que vous obtenez",
+        what_1: "Réponses automatiques sur WhatsApp (EN/FR)",
+        what_2: "Qualification des leads (scénario de chat)",
+        what_3: "Lead enregistré dans Notion (base + champs)",
+        what_4: "Lien Stripe (Payment Link / Checkout)",
+        what_5: "Logs de conversation + analytics de base",
+
+        solution_h2: "Solution",
+        solution_1_h3: "Qualification automatique",
+        solution_1_p: "Ville/pays, âge, langue, besoins, choix de package, timing.",
+        solution_2_h3: "Leads structurés",
+        solution_2_p: "Toutes les infos clés vont dans Notion pour le suivi et le reporting.",
+        solution_3_h3: "Paiement plus rapide",
+        solution_3_p: "Lien Stripe envoyé au bon moment pour conclure.",
+
+        how_h2: "Fonctionnement",
+        how_1_str: "Le client écrit sur WhatsApp",
+        how_1_p: "Chat entrant sur votre numéro.",
+        how_2_str: "L’agent qualifie",
+        how_2_p: "Pose les bonnes questions, gère les objections courantes.",
+        how_3_str: "Lead dans Notion",
+        how_3_p: "Nom, contact, contexte, réponses, statut, notes.",
+        how_4_str: "Lien Stripe envoyé",
+        how_4_p: "Payment Link/Checkout pour le package choisi.",
+
+        pricing_h2: "Tarifs",
+        pricing_mvp_title: "MVP (rapide)",
+        pricing_mvp_sub: "Mise en place unique (7–14 jours)",
+        pricing_mvp_1: "WhatsApp (1 numéro)",
+        pricing_mvp_2: "EN + FR",
+        pricing_mvp_3: "Base de leads Notion",
+        pricing_mvp_4: "Lien de paiement Stripe",
+        pricing_mvp_5: "Logs de base",
+
+        pricing_support_title: "Support",
+        pricing_support_sub: "Recommandé",
+        pricing_support_1: "Mises à jour & optimisation",
+        pricing_support_2: "Contrôle qualité",
+        pricing_support_3: "Petites améliorations",
+
+        pricing_rc_title: "Coûts mensuels",
+        pricing_rc_sub: "Typique à faible volume",
+        pricing_rc_1: "Fournisseur WhatsApp Business API",
+        pricing_rc_2: "Consommation LLM (selon trafic)",
+        pricing_rc_3: "Frais Stripe (par paiement)",
+
+        faq_h2: "FAQ",
+        faq_1_q: "Est-ce conforme pour des services liés à la santé ?",
+        faq_1_a: "Nous ajoutons des garde-fous : pas de diagnostic, pas de promesses. L’agent collecte les infos et route vers paiement/booking.",
+        faq_2_q: "Un humain peut-il reprendre la discussion ?",
+        faq_2_a: "Oui. Le MVP peut inclure des règles de transfert vers un manager (option).",
+        faq_3_q: "Peut-on ajouter d’autres canaux plus tard ?",
+        faq_3_a: "Oui — Instagram, web chat, Telegram, etc. Le MVP démarre sur un seul canal pour livrer vite.",
+
+        contact_h2: "Contact",
+        contact_p: "Répondez sur Telegram pour confirmer : nom de l’entreprise, numéro WhatsApp et type de compte Stripe.",
+        contact_tag: "Automatisation IA & intégrations",
+
+        footer: "© <span id=\"year\"></span> Reelixy. Tous droits réservés."
+      },
+
+      ru: {
+        brand_tag: "AI‑автоматизация для продаж и ops",
+        nav_solution: "Решение",
+        nav_how: "Как работает",
+        nav_pricing: "Цена",
+        nav_faq: "FAQ",
+
+        hero_h1: "WhatsApp‑агент, который превращает переписку в оплату",
+        hero_sub: "Для B2B‑сервисов (например, капельницы): агент отвечает на <strong>английском + французском</strong>, квалифицирует клиента, сохраняет лид в <strong>Notion</strong> и отправляет <strong>ссылку на оплату Stripe</strong>.",
+        cta_quote: "Запросить расчёт",
+        cta_pricing: "Посмотреть цену",
+        hero_note: "Срок MVP: <strong>7–14 дней</strong>. Прозрачные ежемесячные расходы.",
+
+        what_title: "Что входит",
+        what_1: "Автоответы в WhatsApp (EN/FR)",
+        what_2: "Квалификация лида (сценарий диалога)",
+        what_3: "Лид сохраняется в Notion (база + поля)",
+        what_4: "Stripe Payment Link / Checkout",
+        what_5: "Логи переписок + базовая аналитика",
+
+        solution_h2: "Решение",
+        solution_1_h3: "Автоквалификация",
+        solution_1_p: "Страна/город, возраст, язык, запрос, пакет, время.",
+        solution_2_h3: "Структура лидов",
+        solution_2_p: "Ключевые данные сразу в Notion — удобно вести и анализировать.",
+        solution_3_h3: "Быстрее оплата",
+        solution_3_p: "Ссылка Stripe отправляется в нужный момент, чтобы закрыть сделку.",
+
+        how_h2: "Как работает",
+        how_1_str: "Клиент пишет в WhatsApp",
+        how_1_p: "Входящее сообщение на ваш номер.",
+        how_2_str: "Агент квалифицирует",
+        how_2_p: "Задаёт правильные вопросы и обрабатывает возражения.",
+        how_3_str: "Лид сохраняется в Notion",
+        how_3_p: "Контакт, контекст, ответы, статус, заметки.",
+        how_4_str: "Отправляется Stripe‑ссылка",
+        how_4_p: "Payment Link/Checkout на выбранный пакет.",
+
+        pricing_h2: "Цена",
+        pricing_mvp_title: "MVP (быстро)",
+        pricing_mvp_sub: "Разовая настройка (7–14 дней)",
+        pricing_mvp_1: "WhatsApp (1 номер)",
+        pricing_mvp_2: "EN + FR",
+        pricing_mvp_3: "База лидов в Notion",
+        pricing_mvp_4: "Stripe‑ссылка на оплату",
+        pricing_mvp_5: "Базовые логи",
+
+        pricing_support_title: "Поддержка",
+        pricing_support_sub: "Рекомендуем",
+        pricing_support_1: "Правки и улучшение скриптов",
+        pricing_support_2: "Контроль качества",
+        pricing_support_3: "Небольшие доработки",
+
+        pricing_rc_title: "Ежемесячные расходы",
+        pricing_rc_sub: "Обычно при небольшом трафике",
+        pricing_rc_1: "Провайдер WhatsApp Business API",
+        pricing_rc_2: "LLM (по трафику)",
+        pricing_rc_3: "Комиссии Stripe (за платежи)",
+
+        faq_h2: "FAQ",
+        faq_1_q: "Это ок для healthcare‑сервисов?",
+        faq_1_a: "Ставим ограничения: без диагнозов и обещаний. Агент собирает данные и ведёт к оплате/записи.",
+        faq_2_q: "Можно ли передать чат человеку?",
+        faq_2_a: "Да. Можно добавить правила эскалации на менеджера (как апгрейд).",
+        faq_3_q: "Можно добавить другие каналы позже?",
+        faq_3_a: "Да — Instagram, web‑чат, Telegram и т.д. MVP стартует с одного канала, чтобы быстро запуститься.",
+
+        contact_h2: "Контакт",
+        contact_p: "Напиши в Telegram, чтобы подтвердить: название компании, WhatsApp‑номер и тип Stripe‑аккаунта.",
+        contact_tag: "AI‑автоматизация и интеграции",
+
+        footer: "© <span id=\"year\"></span> Reelixy. Все права защищены."
+      }
+    };
+
+    function applyLang(lang){
+      const dict = DICT[lang] || DICT.en;
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (dict[key] != null) el.textContent = dict[key];
+      });
+      document.querySelectorAll('[data-i18n-html]').forEach(el => {
+        const key = el.getAttribute('data-i18n-html');
+        if (dict[key] != null) el.innerHTML = dict[key];
+      });
+
+      document.querySelectorAll('.lang-btn').forEach(b => {
+        b.classList.toggle('active', b.dataset.lang === lang);
+      });
+
+      localStorage.setItem('lang', lang);
+      document.documentElement.setAttribute('lang', lang);
+    }
+
+    const saved = localStorage.getItem('lang');
+    const initial = saved || (navigator.language || 'en').slice(0,2);
+    applyLang(DICT[initial] ? initial : 'en');
+
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.addEventListener('click', () => applyLang(btn.dataset.lang));
+    });
   </script>
 </body>
 </html>
