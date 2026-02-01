@@ -6,11 +6,9 @@
   const $ = (s, r=document) => r.querySelector(s);
   const $$ = (s, r=document) => Array.from(r.querySelectorAll(s));
 
-  const root = $('#chatWidget');
-  if (!root) return;
-
   const btn = $('#chatFab');
   const panel = $('#chatPanel');
+  if (!btn || !panel) return;
   const closeBtn = $('#chatClose');
   const form = $('#chatForm');
   const input = $('#chatInput');
@@ -28,8 +26,11 @@
   }
 
   function t(key){
-    const dict = window.DICT && window.DICT[getLang()];
-    return (dict && dict[key]) || (window.DICT && window.DICT.en && window.DICT.en[key]) || key;
+    // DICT lives in index.html as const DICT
+    // but we also support window.DICT if present
+    const any = (typeof DICT !== 'undefined' ? DICT : (window.DICT || null));
+    const dict = any && any[getLang()];
+    return (dict && dict[key]) || (any && any.en && any.en[key]) || key;
   }
 
   const visitorIdKey = 'agentLandingVisitorId';
