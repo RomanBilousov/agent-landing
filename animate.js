@@ -2,8 +2,14 @@
 // Respects prefers-reduced-motion.
 
 (() => {
+  document.documentElement.classList.add('js');
+
   const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (reduce) return;
+  if (reduce) {
+    // if reduced motion, ensure content stays visible
+    document.querySelectorAll('.reveal').forEach(el => el.classList.add('is-visible'));
+    return;
+  }
 
   const els = document.querySelectorAll('.reveal');
   if (!els.length) return;
@@ -17,7 +23,7 @@
         }
       }
     },
-    { threshold: 0.14, rootMargin: '0px 0px -10% 0px' }
+    { threshold: 0.06, rootMargin: '0px 0px -5% 0px' }
   );
 
   els.forEach((el, i) => {
