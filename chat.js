@@ -109,6 +109,9 @@
   // Initial greeting
   addMsg('bot', t('chat_greeting'));
 
+  // Ensure translated placeholder is applied on load
+  input.setAttribute('placeholder', t('chat_placeholder'));
+
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
     const q = (input.value || '').trim();

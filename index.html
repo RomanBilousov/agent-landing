@@ -752,6 +752,12 @@
         if (dict[key] != null) el.innerHTML = dict[key];
       });
 
+      // placeholders (e.g., chat input)
+      document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+        const key = el.getAttribute('data-i18n-placeholder');
+        if (dict[key] != null) el.setAttribute('placeholder', dict[key]);
+      });
+
       document.querySelectorAll('.lang-btn').forEach(b => {
         b.classList.toggle('active', b.dataset.lang === lang);
       });
