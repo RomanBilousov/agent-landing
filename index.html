@@ -22,6 +22,7 @@
         <a href="#solution" data-i18n="nav_solution">Solution</a>
         <a href="#how" data-i18n="nav_how">How it works</a>
         <a href="#pricing" data-i18n="nav_pricing">Pricing</a>
+        <a href="#questions" data-i18n="nav_questions">Questions</a>
         <a href="#faq" data-i18n="nav_faq">FAQ</a>
       </nav>
 
@@ -100,18 +101,39 @@
             <div class="muted" data-i18n="how_1_p">Inbound chat to your business number.</div>
           </li>
           <li>
-            <strong data-i18n="how_2_str">Agent qualifies</strong>
-            <div class="muted" data-i18n="how_2_p">Asks the right questions, handles common objections.</div>
+            <strong data-i18n="how_2_str">Agent chats and qualifies</strong>
+            <div class="muted" data-i18n="how_2_p">Collects the key details and answers common questions.</div>
           </li>
           <li>
             <strong data-i18n="how_3_str">Lead saved to Notion</strong>
-            <div class="muted" data-i18n="how_3_p">Name, contact, context, answers, status, notes.</div>
+            <div class="muted" data-i18n="how_3_p">Everything is stored in one place for your team.</div>
           </li>
           <li>
-            <strong data-i18n="how_4_str">Stripe link sent</strong>
-            <div class="muted" data-i18n="how_4_p">Payment Link/Checkout for selected package.</div>
+            <strong data-i18n="how_4_str">Payment link sent</strong>
+            <div class="muted" data-i18n="how_4_p">A simple Stripe payment link is sent when the client is ready.</div>
           </li>
         </ol>
+      </div>
+    </section>
+
+    <section id="questions" class="section">
+      <div class="container reveal">
+        <h2 data-i18n="q_h2">What the agent will ask</h2>
+        <p class="muted" data-i18n="q_p">We keep it short and polite. You can edit the questions.</p>
+        <div class="grid-3">
+          <div class="feature">
+            <h3 data-i18n="q_1_h3">Location</h3>
+            <p data-i18n="q_1_p">City / country and preferred language (EN/FR).</p>
+          </div>
+          <div class="feature">
+            <h3 data-i18n="q_2_h3">Basic details</h3>
+            <p data-i18n="q_2_p">Age or year of birth, and any preferences.</p>
+          </div>
+          <div class="feature">
+            <h3 data-i18n="q_3_h3">Service choice</h3>
+            <p data-i18n="q_3_p">Which package they want and when they want to come.</p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -204,13 +226,14 @@
         nav_solution: "Solution",
         nav_how: "How it works",
         nav_pricing: "Pricing",
+        nav_questions: "Questions",
         nav_faq: "FAQ",
 
-        hero_h1: "WhatsApp agent that converts chats into paid orders",
-        hero_sub: "For B2B services (e.g., IV drips): the agent replies in <strong>English + French</strong>, qualifies the client, saves the lead to <strong>Notion</strong>, and sends a <strong>Stripe payment link</strong>.",
-        cta_quote: "Get a quote",
+        hero_h1: "WhatsApp agent that turns chats into paid bookings",
+        hero_sub: "For B2B services (e.g., IV drips): the agent replies in <strong>English + French</strong>, asks the right questions, saves the lead to <strong>Notion</strong>, and sends a <strong>Stripe payment link</strong>.",
+        cta_quote: "Request a quote",
         cta_pricing: "See pricing",
-        hero_note: "MVP delivery: <strong>7–14 days</strong>. Transparent monthly running costs.",
+        hero_note: "MVP delivery: <strong>7–14 days</strong>. Clear monthly running costs.",
 
         what_title: "What you get",
         what_1: "Auto-replies in WhatsApp (EN/FR)",
@@ -230,12 +253,21 @@
         how_h2: "How it works",
         how_1_str: "Client messages WhatsApp",
         how_1_p: "Inbound chat to your business number.",
-        how_2_str: "Agent qualifies",
-        how_2_p: "Asks the right questions, handles common objections.",
+        how_2_str: "Agent chats and qualifies",
+        how_2_p: "Collects the key details and answers common questions.",
         how_3_str: "Lead saved to Notion",
-        how_3_p: "Name, contact, context, answers, status, notes.",
-        how_4_str: "Stripe link sent",
-        how_4_p: "Payment Link/Checkout for selected package.",
+        how_3_p: "Everything is stored in one place for your team.",
+        how_4_str: "Payment link sent",
+        how_4_p: "A simple Stripe payment link is sent when the client is ready.",
+
+        q_h2: "What the agent will ask",
+        q_p: "We keep it short and polite. You can edit the questions.",
+        q_1_h3: "Location",
+        q_1_p: "City / country and preferred language (EN/FR).",
+        q_2_h3: "Basic details",
+        q_2_p: "Age or year of birth, and any preferences.",
+        q_3_h3: "Service choice",
+        q_3_p: "Which package they want and when they want to come.",
 
         pricing_h2: "Pricing",
         pricing_mvp_title: "MVP (fast)",
@@ -252,10 +284,10 @@
         pricing_support_2: "Quality control",
         pricing_support_3: "Small improvements",
 
-        pricing_rc_title: "Running costs",
+        pricing_rc_title: "Monthly running costs",
         pricing_rc_sub: "Typical on low volume",
-        pricing_rc_1: "WhatsApp Business API provider",
-        pricing_rc_2: "LLM usage (by traffic)",
+        pricing_rc_1: "WhatsApp business channel (setup & monthly fee)",
+        pricing_rc_2: "AI chat usage (depends on message volume)",
         pricing_rc_3: "Stripe fees (per payment)",
 
         faq_h2: "FAQ",
@@ -278,6 +310,7 @@
         nav_solution: "Solution",
         nav_how: "Fonctionnement",
         nav_pricing: "Tarifs",
+        nav_questions: "Questions",
         nav_faq: "FAQ",
 
         hero_h1: "Un agent WhatsApp qui transforme les chats en paiements",
@@ -304,12 +337,21 @@
         how_h2: "Fonctionnement",
         how_1_str: "Le client écrit sur WhatsApp",
         how_1_p: "Chat entrant sur votre numéro.",
-        how_2_str: "L’agent qualifie",
-        how_2_p: "Pose les bonnes questions, gère les objections courantes.",
+        how_2_str: "L’agent échange et qualifie",
+        how_2_p: "Collecte les infos clés et répond aux questions courantes.",
         how_3_str: "Lead dans Notion",
-        how_3_p: "Nom, contact, contexte, réponses, statut, notes.",
-        how_4_str: "Lien Stripe envoyé",
-        how_4_p: "Payment Link/Checkout pour le package choisi.",
+        how_3_p: "Tout est centralisé pour votre équipe.",
+        how_4_str: "Lien de paiement envoyé",
+        how_4_p: "Un lien de paiement Stripe simple est envoyé au bon moment.",
+
+        q_h2: "Ce que l’agent demandera",
+        q_p: "Court, poli, et modifiable selon votre activité.",
+        q_1_h3: "Localisation",
+        q_1_p: "Ville / pays et langue préférée (EN/FR).",
+        q_2_h3: "Informations de base",
+        q_2_p: "Âge ou année de naissance, et préférences.",
+        q_3_h3: "Choix du service",
+        q_3_p: "Quel package et quand le client veut venir.",
 
         pricing_h2: "Tarifs",
         pricing_mvp_title: "MVP (rapide)",
@@ -328,8 +370,8 @@
 
         pricing_rc_title: "Coûts mensuels",
         pricing_rc_sub: "Typique à faible volume",
-        pricing_rc_1: "Fournisseur WhatsApp Business API",
-        pricing_rc_2: "Consommation LLM (selon trafic)",
+        pricing_rc_1: "Canal WhatsApp pro (mise en place + abonnement)",
+        pricing_rc_2: "Utilisation IA (selon le volume de messages)",
         pricing_rc_3: "Frais Stripe (par paiement)",
 
         faq_h2: "FAQ",
@@ -352,6 +394,7 @@
         nav_solution: "Решение",
         nav_how: "Как работает",
         nav_pricing: "Цена",
+        nav_questions: "Вопросы",
         nav_faq: "FAQ",
 
         hero_h1: "WhatsApp‑агент, который превращает переписку в оплату",
@@ -378,12 +421,21 @@
         how_h2: "Как работает",
         how_1_str: "Клиент пишет в WhatsApp",
         how_1_p: "Входящее сообщение на ваш номер.",
-        how_2_str: "Агент квалифицирует",
-        how_2_p: "Задаёт правильные вопросы и обрабатывает возражения.",
+        how_2_str: "Агент общается и уточняет",
+        how_2_p: "Собирает ключевые данные и отвечает на частые вопросы.",
         how_3_str: "Лид сохраняется в Notion",
-        how_3_p: "Контакт, контекст, ответы, статус, заметки.",
-        how_4_str: "Отправляется Stripe‑ссылка",
-        how_4_p: "Payment Link/Checkout на выбранный пакет.",
+        how_3_p: "Всё в одном месте — удобно менеджеру.",
+        how_4_str: "Ссылка на оплату",
+        how_4_p: "Простая ссылка Stripe отправляется, когда клиент готов.",
+
+        q_h2: "Какие вопросы задаёт агент",
+        q_p: "Коротко, вежливо, и можно настроить под бизнес.",
+        q_1_h3: "Локация",
+        q_1_p: "Город / страна и язык (EN/FR).",
+        q_2_h3: "Базовые данные",
+        q_2_p: "Возраст или год рождения и предпочтения.",
+        q_3_h3: "Выбор услуги",
+        q_3_p: "Какой пакет и когда хочет прийти.",
 
         pricing_h2: "Цена",
         pricing_mvp_title: "MVP (быстро)",
@@ -402,8 +454,8 @@
 
         pricing_rc_title: "Ежемесячные расходы",
         pricing_rc_sub: "Обычно при небольшом трафике",
-        pricing_rc_1: "Провайдер WhatsApp Business API",
-        pricing_rc_2: "LLM (по трафику)",
+        pricing_rc_1: "Официальный WhatsApp для бизнеса (подключение + абонплата)",
+        pricing_rc_2: "AI‑переписка (зависит от количества сообщений)",
         pricing_rc_3: "Комиссии Stripe (за платежи)",
 
         faq_h2: "FAQ",
