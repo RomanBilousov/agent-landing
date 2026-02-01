@@ -19,66 +19,8 @@
 
   const igUrl = 'https://www.instagram.com/ninakopaeva777';
 
-  // Simple KB: keyword → answer keys.
-  // Keep answers short and non-technical.
-  const KB = [
-    {
-      match: [/price|cost|€|2500|pricing|tarif/i],
-      a: {
-        en: 'Setup is €2,500. Typical MVP delivery: 7–14 days. Monthly running costs depend on message volume.',
-        fr: 'La mise en place est à 2 500 €. Délai typique : 7–14 jours. Les coûts mensuels dépendent du volume de messages.',
-        ru: 'Настройка — €2,500. Срок запуска обычно 7–14 дней. Ежемесячные расходы зависят от объёма сообщений.'
-      }
-    },
-    {
-      match: [/how long|timeline|days|delivery|7|14/i],
-      a: {
-        en: 'Typical delivery is 7–14 days after we have WhatsApp + Stripe + Notion access.',
-        fr: 'Le délai typique est de 7–14 jours après accès à WhatsApp, Stripe et Notion.',
-        ru: 'Обычно 7–14 дней после того, как есть доступ к WhatsApp, Stripe и Notion.'
-      }
-    },
-    {
-      match: [/whatsapp|number|phone/i],
-      a: {
-        en: 'We connect to one WhatsApp business number and the agent replies there.',
-        fr: 'Nous connectons un numéro WhatsApp business, et l’agent répond dans ce chat.',
-        ru: 'Подключаем один бизнес‑номер WhatsApp — агент отвечает в этом чате.'
-      }
-    },
-    {
-      match: [/notion|lead/i],
-      a: {
-        en: 'Each conversation is saved to Notion as a lead: contact, answers, notes, and status (new/qualified/paid).',
-        fr: 'Chaque conversation est enregistrée dans Notion : contact, réponses, notes et statut (new/qualified/paid).',
-        ru: 'Каждая переписка сохраняется в Notion как лид: контакт, ответы, заметки и статус (new/qualified/paid).' 
-      }
-    },
-    {
-      match: [/stripe|pay|payment|checkout/i],
-      a: {
-        en: 'When the client is ready, the agent sends a simple Stripe payment link.',
-        fr: 'Quand le client est prêt, l’agent envoie un lien de paiement Stripe.',
-        ru: 'Когда клиент готов — агент отправляет простую ссылку на оплату Stripe.'
-      }
-    },
-    {
-      match: [/language|english|french|français|francais/i],
-      a: {
-        en: 'The agent supports English and French and can switch automatically.',
-        fr: 'L’agent parle anglais et français et peut basculer automatiquement.',
-        ru: 'Агент поддерживает английский и французский и может переключаться автоматически.'
-      }
-    },
-    {
-      match: [/medical|diagnosis|health|treat/i],
-      a: {
-        en: 'The agent does not provide medical diagnosis. It collects information and helps with logistics and payment.',
-        fr: 'L’agent ne fait pas de diagnostic médical. Il collecte des infos et aide pour la logistique et le paiement.',
-        ru: 'Агент не ставит диагнозы. Он собирает информацию и помогает с организацией и оплатой.'
-      }
-    }
-  ];
+  // NOTE: Real AI responses are generated server-side (Reelixy CRM).
+  // No API keys are stored on the landing.
 
   function getLang(){
     const lang = (localStorage.getItem('lang') || document.documentElement.getAttribute('lang') || 'en').slice(0,2);
@@ -100,8 +42,8 @@
     return id;
   }
 
+  // legacy helper logger (kept for compatibility; not used in real AI mode)
   async function sendToCRM(payload){
-    // best-effort; ignore failures
     try {
       const url = 'https://crm.reelixy.com/api/public/agent-landing/message';
       await fetch(url, {
@@ -123,12 +65,28 @@
     log.scrollTop = log.scrollHeight;
   }
 
-  function answer(q){
-    const lang = getLang();
-    for (const item of KB) {
-      if (item.match.some(rx => rx.test(q))) return item.a[lang] || item.a.en;
+  async function answerViaCRM(q){
+    const url = 'https://crm.reelixy.com/api/public/agent-landing/send';
+    const payload = {
+      visitorId: getVisitorId(),
+      message: q,
+      language: getLang(),
+      pageUrl: window.location.href,
+      source: 'agent-landing'
+    };
+
+    const r = await fetch(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+
+    const j = await r.json().catch(() => ({}));
+    if (!r.ok || !j.success) {
+      throw new Error(j.error || 'Request failed');
     }
-    return t('chat_fallback');
+
+    return j.data && j.data.reply ? j.data.reply : t('chat_fallback');
   }
 
   function open(){
@@ -149,7 +107,7 @@
   // Initial greeting
   addMsg('bot', t('chat_greeting'));
 
-  form.addEventListener('submit', (e) => {
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
     const q = (input.value || '').trim();
     if (!q) return;
@@ -157,21 +115,23 @@
     addMsg('user', q);
     input.value = '';
 
-    // simulate small thinking delay
-    setTimeout(() => {
-      const a = answer(q);
-      addMsg('bot', a);
+    // lightweight typing indicator
+    const typingId = 'typing_' + Date.now();
+    const typingEl = document.createElement('div');
+    typingEl.className = 'chat-msg bot';
+    typingEl.id = typingId;
+    typingEl.innerHTML = '<div class="chat-bubble">…</div>';
+    log.appendChild(typingEl);
+    log.scrollTop = log.scrollHeight;
 
-      // Send visitor question + helper answer to CRM (source=agent-landing)
-      sendToCRM({
-        visitorId: getVisitorId(),
-        userMessage: q,
-        botMessage: a,
-        language: getLang(),
-        pageUrl: window.location.href,
-        source: 'agent-landing'
-      });
-    }, 180);
+    try {
+      const reply = await answerViaCRM(q);
+      typingEl.remove();
+      addMsg('bot', reply);
+    } catch (err) {
+      typingEl.remove();
+      addMsg('bot', t('chat_fallback'));
+    }
   });
 
   sendToIg.addEventListener('click', () => {
