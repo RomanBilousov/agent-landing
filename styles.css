@@ -306,6 +306,9 @@ h2{margin:0 0 14px; font-size: 26px}
 }
 
 @media (max-width: 900px){
+  /* iOS/Safari sometimes delays IntersectionObserver; don't hide content on mobile */
+  .js .reveal{opacity: 1; transform: none;}
+
   .hero{padding: 44px 0 22px}
   .hero-grid{grid-template-columns: 1fr}
   h1{font-size: 34px}
